@@ -1,25 +1,71 @@
 aid: lifestyleshealthcare-com
+
 name: LifeStyles Healthcare
-description: 'LifeStyles Healthcare is a company surfaced via the API Evangelist harvest backlog (source:
-  vc-portfolio; backed by hillhouse) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'LifeStyles Healthcare is a health technology company focused on providing integrated digital health solutions, including telemedicine platforms, patient engagement tools, and data analytics services. The company aims to improve healthcare accessibility and outcomes through innovative software and services for providers and patients alike. It is backed by Hillhouse and part of a broader portfolio of health-focused ventures.'
+
 url: https://raw.githubusercontent.com/api-evangelist/lifestyleshealthcare-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
+- HealthTech
+- Telemedicine
+- PatientEngagement
+- DataAnalytics
+- DigitalHealth
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+common:
+- type: Hosts
+  url: hosts/lifestyleshealthcare-com-hosts.yml
+- type: Vendors
+  url: vendors/lifestyleshealthcare-com-vendors.yml
+- type: TermsOfService
+  url: https://www.lifestylesglobal.com/terms
+- type: Newsroom
+  url: https://www.lifestylesglobal.com/Home/news
+- type: DomainSecurity
+  url: security/lifestyleshealthcare-com-domain-security.yml
+- type: Website
+  url: https://www.lifestylesglobal.com
+
+apis: []
+
 x-backed-by:
 - hillhouse
-common:
-- type: Website
-  url: https://www.lifestyleshealthcare.com
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-22'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.lifestylesglobal.com
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
